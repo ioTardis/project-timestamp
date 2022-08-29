@@ -24,6 +24,14 @@ app.get("/api/hello", (req, res) => {
   res.json({greeting: 'hello API'});
 });
 
+// If request to API is empty return current time
+app.get("/api", (req, res) => {
+  let date = new Date();
+  let unix = date.getTime();
+  let utc = date.toUTCString();
+  res.json({ unix, utc });
+});
+
 // timestamp API
 app.get("/api/:date", (req, res) => {
   // recieving date with get parameter 
@@ -31,24 +39,19 @@ app.get("/api/:date", (req, res) => {
   let date;
 
   // check format of the parameter
-  if (timeParam) {
     if (!isNaN(timeParam)) {
       date = new Date(Number(timeParam));
     } else {
       date = new Date(timeParam);
     }
-  } else {
-    // generate current timestamp if parameter is empty
-    date = new Date();
-  }
 
   // check format of a timestamp
-  if (date === 'Invalid Date') {
-    res.json({ error: "Invalid date"});
+  if (date == 'Invalid Date') {
+    res.json({ error : "Invalid Date" });
   } else {
-    const unixTime = date.getTime();
-    const utcTime = date.toUTCString();
-    res.json({ unixTime, utcTime });
+    const unix = date.getTime();
+    const utc = date.toUTCString();
+    res.json({ unix, utc });
   }
 });
 
