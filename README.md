@@ -7,9 +7,9 @@ If request is empty it sends back current timestamp.
 ## Example usage
 
 ```
-https://461d919f-ef48-4105-8344-09c6d5e30eba.id.repl.co/api/2022-09-10
-https://461d919f-ef48-4105-8344-09c6d5e30eba.id.repl.co/api/1661849116558
-https://461d919f-ef48-4105-8344-09c6d5e30eba.id.repl.co/api/
+https://project-timestamp.iotardis.repl.co/api/2022-09-10
+https://project-timestamp.iotardis.repl.co/api/1661849116558
+https://project-timestamp.iotardis.repl.co/api/
 ```
 
 ## Example output
