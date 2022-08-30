@@ -17,3 +17,5 @@ https://461d919f-ef48-4105-8344-09c6d5e30eba.id.repl.co/api/
 ```
 {"unix":1661849116558,"utc":"Tue, 30 Aug 2022 08:45:16 GMT"}
 ```
+
+## [Try it](https://project-timestamp.iotardis.repl.co)
